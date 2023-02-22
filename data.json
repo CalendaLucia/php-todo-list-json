@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "text": "HMTL",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "text": "CSS",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "text": "Responsive design",
+      "completed": true
+    },
+    {
+        "id": 3,
+        "text": "Javascript",
+        "completed": true
+      },
+      {
+        "id": 3,
+        "text": "PHP",
+        "completed": true
+      },
+      {
+        "id": 3,
+        "text": "Laravel",
+        "completed": false
+      }
+            
+  ]
+  

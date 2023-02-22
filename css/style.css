@@ -1,0 +1,7 @@
+.container {
+     background-color:#252850;
+}
+
+.completed {
+    text-decoration: line-through;
+  }
