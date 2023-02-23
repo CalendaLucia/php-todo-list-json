@@ -21,10 +21,11 @@
           </li>
         </ul>
       </div>
-      <div class="input-group w-50 mx-auto d-flex justify-content-center p-3">
-        <input type="text" v-model="newTodoText" class="form-control" placeholder="Inserisci il testo qui">
-        <button class="btn btn-outline-warning" type="button" @click="addTodo">Inserisci</button>
-      </div>
+      <form action="./create.php" method="POST" @submit.prevent="addTodo">
+         <label class="text-white input-group" for="newTodoText">Nuova Task</label>
+           <input type="text" id="newTodoText" name="newTodoText" v-model="newTodoText" class="form-control w-50" placeholder="Inserisci il testo qui">
+           <button class="btn btn-outline-warning" type="submit">Inserisci</button>
+      </form>
     </div>
   </div>
 

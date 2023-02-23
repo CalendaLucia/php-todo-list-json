@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             apiUrl: './api.php',
+            apiAdd:'./create.php',
             todos: [],
             newTodoText: '',
             
@@ -21,12 +22,19 @@ createApp({
         },
         addTodo() {
             const newTodo = {
-              id: this.todos.length + 1,
               text: this.newTodoText,
               completed: false
             };
-            this.todos.push(newTodo);
-            this.newTodoText = '';
+            axios.post(this.apiAdd, { newTodoText: newTodo.text })
+             .then(response => {
+               // aggiungiamo il nuovo todo alla lista
+               this.todos.push(newTodo);
+               // puliamo il campo di input
+               this.newTodoText = '';
+            })
+             .catch(error => {
+               console.error(error);
+           });
           },
     },
     mounted() {
